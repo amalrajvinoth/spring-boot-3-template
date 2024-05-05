@@ -26,7 +26,7 @@ public class ArticleDto {
 
     @NotNull(message = "Title should be populated")
     @Size(min = 1, max = 100, message = "Title length must be between 1 and 100")
-    @Schema(description = "Article's title", required = true)
+    @Schema(description = "Article's title")
     private String title;
 
     @Size(max = 255, message = "Summary length shouldn't be greater than 255")
@@ -35,12 +35,12 @@ public class ArticleDto {
 
     @NotNull(message = "Text should be populated")
     @Size(min = 1, message = "Text length should be 1 at least")
-    @Schema(description = "Article's text", required = true)
+    @Schema(description = "Article's text")
     private String text;
 
     @NotNull(message = "Author should be populated")
     @Size(max = 50, message = "Author length shouldn't be greater than 50")
-    @Schema(description = "Article's author", required = true)
+    @Schema(description = "Article's author")
     private String author;
 
     @Null(message = "DateCreated shouldn't be populated")
